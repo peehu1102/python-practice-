@@ -78,4 +78,4 @@ name = input("What's your name?")
 hello()
 hello(name)
 #use with parameters cuz its easier and efficient it helps a lot with long codes
-# #also u can use a lot of vvarriables again and again
+#also u can use a lot of varriables again and again
