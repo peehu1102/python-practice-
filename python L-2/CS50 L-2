@@ -1,0 +1,131 @@
+#why use elif over if or whats the difference bw them
+#elif is faster but you wont notice the difference in smaller programs but in longer program its better
+
+#IF
+x=int(input("choose x "))
+y=int(input("choose y "))
+if(x>y):
+    print("x is greater than y")
+if(x<y):
+    print("x is less than y")
+if(x==y):
+    print("x is equals to y")
+
+#(Notice how you are providing a series of if statements. First,the first if statement is
+# evaluated. Then, the second if statement runs its evaluation.Finally, the last if statement
+# runs its evaluation. This flow of decisions is called “control flow.”even if the first if statement satisfies
+#it would still evaluate the rest of the if statements)
+
+#   START
+#     |
+#IF x < y-----------------
+#     |                  |
+#True(PRINT)          FALSE(MOVE TO THE NEXT CONDITION )
+#     |                  |
+#"x is less than y"     x > y-----------------
+#                        |                   |
+#                     TRUE(PRINT)          FALSE(MOVE TO THE NEXT CONDITION )
+#                        |                   |
+#             "x is greater than y"         x == y-----------------
+#                                            |                    |
+#                                          TRUE(PRINT)          FALSE(STOP CUZ THE CODE ENDS)
+#                                            |                    |
+#                                        "x is equal to y"       stops
+
+
+#ELIF
+x=int(input("choose x "))
+y=int(input("choose y "))
+if(x>y):
+    print("x is greater than y")
+elif(x<y):
+    print("x is less than y")
+elif(x==y):
+    print("x is equals to y")
+
+#(Notice how the use of elif allows the program to make fewer decisions,therefore its fast
+# First, the if statement is evaluated. If this statement is found to be true, all the elif statements
+# will not be run at all. However, if the if statement is evaluated and found to be false,
+# the first elif will be evaluated. If this is true, it will not run the final evaluation)
+#THEREFORE,dont use if again and again use it the first timme and use elif for the rest of the program
+
+# START
+#  |
+#x < y-----------------------------
+#  |                              |
+#TRUE(PRINT AND THEN STOPS)      FALSE(MOVE TO NEXT STATEMENT)
+#  |                              |
+#"x is less than y"              x > y-------------------------
+#  |                              |                           |
+#  |                          TRUE(PRINT AND THEN STOPS)    FALSE(MOVE TO NEXT ELIF STATEMENT)
+#  |                              |                           |
+#  |                           "x is greater than y"        x == y--------------------
+#  |                              |                           |                      |
+#  |                              |                    TRUE(PRINT AND THEN STOPS) FALSE
+#  |                              |                           |                      |
+#  |                              |                      "x is equal to y"        STOPS
+#  |                              |                           |                      |
+#STOPS--------------------------------------------------------------------------------
+
+
+#ELSE
+x = int(input("What's x? "))
+y = int(input("What's y? "))
+
+if x < y:
+    print("x is less than y")
+elif x > y:
+    print("x is greater than y")
+else:
+    print("x is equal to y")
+
+# notice how its even less complex now.The behavior of the code is same but the complexity of the code decreased
+#
+
+# START
+#   |
+# x < y--------------------------
+#   |                           |
+# TRUE(PRINT AND STOP)        FALSE(MOVE ON TOO THE NEXT STATEMENT)
+#   |                           |
+#"x is less than y"           x > y------------------------
+#   |                           |                         |
+#   |                     TRUE(PRINT AND STOPS)         False(IF ANYTHNG ELSE THEN STATED HAPPENS PRINT AND STOPS)
+#   |                           |                         |
+#   |                   "x is greater than y"      "x is equal to y"
+#   |                           |                         |
+#   -------------------------------------------------------
+#                               |
+#                              STOP
+
+
+#OR
+x = int(input("What's x? "))
+y = int(input("What's y? "))
+
+if x < y or x > y:
+    print("x is not equal to y")
+else:
+    print("x is equal to y")
+#we can make our code even less complex by not writing x<y or x>y, we can just write if x!=y or x==y and use
+# the else statement then,that way code would simplify even more and therefore would be more efficient.
+
+#PARITY FUNCTION
+# every integer can be writen using 1 and 0 in the binary system.ex: 5=101 in binary parity basically
+# refers to how many 1 are there in the binary system of any number.ex: parity of 5 is 2 cuz 101 has 2 one
+# if the number of 1 in the binary representation is even then its even parity and odd number of
+# 1 means odd parity. ex: 5 has two 1 and 2 is even so 5 is even parity.
+
+def main():
+    x = int(input("What's x? "))
+    if is_even(x):
+        print("Even")
+    else:
+        print("Odd")
+
+def is_even(n):
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+main()
