@@ -116,6 +116,27 @@ else:
 # if the number of 1 in the binary representation is even then its even parity and odd number of
 # 1 means odd parity. ex: 5 has two 1 and 2 is even so 5 is even parity.
 
+#PYTHONIC FUNCTIONS:
+#In the programming world, there are types of programming that are called “Pythonic” in nature. That is,
+# there are ways to program that are sometimes only seen in Python programming. Consider the following
+# revision to our program:
+
+def main():
+    x = int(input("What's x? "))
+    if is_even(x):
+        print("Even")
+    else:
+        print("Odd")
+
+def is_even(n):#using booleans
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+main()
+
+#we can write this in a compressed way,which is only available in python
+
 def main():
     x = int(input("What's x? "))
     if is_even(x):
@@ -124,8 +145,31 @@ def main():
         print("Odd")
 
 def is_even(n):
-    if n % 2 == 0:
-        return True
-    else:
-        return False
+    return n % 2 ==0 #OR return True if n%2==0 else False
+
 main()
+
+#MATCH
+ name = input("What's your name? "#or we can compress it as:
+  if name == "Harry":       #if name == "Harry" or name == "Hermione" or name == "Ron":
+      print("Gryffindor")   #    print("griffindor")
+      print("Gryffindor")
+  elif name == "Hermione":
+      print("Gryffindor")
+  elif name == "Ron":
+      print("Gryffindor")
+  elif name == "Draco":
+      print("Slytherin")
+  else:
+      print("Who?")
+
+#to simplify it even furthr we can use "match"
+name = input("What's your name? ")
+
+  match name:
+      case "Harry" | "Hermione" | "Ron":  # '|' ths works as "or" in 'match'
+          print("Gryffindor")
+      case "Draco":
+          print("Slytherin")
+      case _:
+          print("Who?")  #'_' this works as 'else' in match
