@@ -6,7 +6,7 @@
 #“Of Life, the Universe and Everything…” said Deep Thought.
 #“Yes…!”
 #“Is…” said Deep Thought, and paused.
-#“Yes…!”
+#“Yes…!” 
 #“Is…”
 #“Yes…!!!…?”
 #“Forty-two,” said Deep Thought, with infinite majesty and calm.”#########
